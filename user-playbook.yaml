@@ -1,5 +1,6 @@
 - name: whoami playbook
   gather_facts: false
+  hosts: all
   tasks:
     - name: get username on the remote host
       become: false
