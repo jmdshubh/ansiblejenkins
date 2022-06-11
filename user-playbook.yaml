@@ -1,0 +1,10 @@
+- name: whoami playbook
+  gather_facts: false
+  tasks:
+    - name: get username on the remote host
+      become: false
+      command: whoami
+      register: hostuser
+    - name: display the user
+      debug:
+        msg: "Remote user {{hostuser}} displaying through jenkins"
